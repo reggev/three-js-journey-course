@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#web-gl-View {
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  overflow: hidden;
+}

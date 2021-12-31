@@ -10,7 +10,7 @@ module.exports = {
     filename: 'bundle.[contenthash].js',
     path: path.resolve(__dirname, '../dist'),
   },
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   devServer: {
     static: {
       directory: path.join(__dirname, 'public'),
@@ -22,7 +22,7 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{from: path.resolve(__dirname, 'public')}],
     }),
-    new HtmlWebpackPlugin({title: 'Three JS Study', favicon: 'public/favicon.ico'}),
+    new HtmlWebpackPlugin({title: 'Three JS Journey', favicon: 'public/favicon.ico'}),
   ],
   module: {
     rules: [
