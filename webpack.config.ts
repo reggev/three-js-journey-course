@@ -1,9 +1,10 @@
-const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+import * as path from 'path'
+import * as webpack from 'webpack'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
+import 'webpack-dev-server'
 
-/** @type {import('webpack').Configuration} */
-module.exports = {
+const config: webpack.Configuration = {
   entry: './src/index.ts',
   output: {
     hashFunction: 'xxhash64',
@@ -22,7 +23,10 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [{from: path.resolve(__dirname, 'public')}],
     }),
-    new HtmlWebpackPlugin({title: 'Three JS Journey', favicon: 'public/favicon.ico'}),
+    new HtmlWebpackPlugin({
+      title: 'Three JS Journey',
+      favicon: 'public/favicon.ico',
+    }),
   ],
   module: {
     rules: [
@@ -80,3 +84,4 @@ module.exports = {
     },
   },
 }
+export default config

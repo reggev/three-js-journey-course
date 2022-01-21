@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "lib": ["es2020", "DOM"],
-    "target": "ES2020",
+    "target": "es2020",
     "moduleResolution": "node",
-    "module": "esnext",
+    "module": "es2022",
     "strict": true,
     "declaration": true,
     "sourceMap": true,
@@ -24,5 +24,11 @@
     }
   },
   "include": ["src/**/*.js", "src/**/*.ts", "src/**/*.d.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "webpack.config.ts"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+      "esModuleInterop": true
+    }
+  }
 }

@@ -7,7 +7,7 @@
   },
   "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 2020,
+    "ecmaVersion": 2022,
     "sourceType": "module"
   },
   "extends": ["plugin:node/recommended"],
@@ -32,12 +32,14 @@
         "ignores": ["dynamicImport", "modules"]
       }
     ],
-    "node/exports-style": ["error", "module.exports"],
-    "node/no-unpublished-require": [
-      "error",
-      {
-        "allowModules": ["html-webpack-plugin", "copy-webpack-plugin"]
+    "node/exports-style": ["error", "module.exports"]
+  },
+  "overrides": [
+    {
+      "files": ["webpack.config.js"],
+      "rules": {
+        "node/no-unpublished-import": "off"
       }
-    ]
-  }
+    }
+  ]
 }
