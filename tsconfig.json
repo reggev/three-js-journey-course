@@ -1,34 +1,20 @@
 {
   "compilerOptions": {
-    "lib": ["es2020", "DOM"],
-    "target": "es2020",
-    "moduleResolution": "node",
-    "module": "es2022",
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "moduleResolution": "Node",
+    "module": "ESNext",
     "strict": true,
-    "declaration": true,
     "sourceMap": true,
-    "declarationMap": true,
-    "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "allowJs": true,
-    "checkJs": true,
-    // "emitDeclarationOnly": true,
-    "baseUrl": ".",
-    "declarationDir": "types",
-    "maxNodeModuleJsDepth": 0,
+    "esModuleInterop": true,
+    "noEmit": true,
     "skipLibCheck": true,
-    "outDir": "./dist/",
+    "checkJs": true,
     "paths": {
       "assets/*": ["./public/*"]
     }
   },
-  "include": ["src/**/*.js", "src/**/*.ts", "src/**/*.d.ts"],
-  "exclude": ["node_modules", "webpack.config.ts"],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS",
-      "esModuleInterop": true
-    }
-  }
+  "include": ["src"]
 }
